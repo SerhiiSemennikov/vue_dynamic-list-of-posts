@@ -28,6 +28,7 @@ export default {
   },
   methods: {
     addUser($event) {
+      localStorage.setItem("user");
       this.user = { ...$event[0] };
       this.isActiveLoginPage = false;
     },

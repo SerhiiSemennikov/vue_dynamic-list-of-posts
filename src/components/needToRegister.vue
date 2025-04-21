@@ -11,7 +11,7 @@ export default {
 
 <template>
   <div class="field">
-    <label class="label" htmlFor="user-name"> Your Name </label>
+    <label class="label" for="user-name"> Your Name </label>
 
     <div class="control has-icons-left">
       <input
@@ -22,7 +22,7 @@ export default {
         class="input"
         placeholder="Enter your name"
         required
-        minlength="{4}"
+        minlength="4"
       />
       <div class="body">
         <slot :x="name">{{ name }}</slot>

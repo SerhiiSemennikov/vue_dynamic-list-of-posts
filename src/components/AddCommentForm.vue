@@ -52,7 +52,7 @@ export default {
         this.inputNameError = "Name can't be empty";
       }
       if (name.length > 33) {
-        this.inputEmailError = "Max length of name is 33 symbols";
+        this.inputNameError = "Max length of name is 33 symbols";
       }
       if (!emailRegex.test(email)) {
         this.inputEmailError = "You must use correct email";

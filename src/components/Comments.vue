@@ -52,7 +52,7 @@ export default {
   },
   methods: {
     deleteComment(commentId) {
-      this.comments = this.comments.filter((com) => com.id !== commentId);
+      // this.comments = this.comments.filter((com) => com.id !== commentId);
       deleteComment(commentId).then(() => {
         this.comments = this.comments.filter((com) => com.id !== commentId);
       });

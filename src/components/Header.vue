@@ -13,7 +13,7 @@ export default {
   <nav class="navbar" role="navigation" aria-label="main navigation">
   
      
-    <h2 className="is-size-4">Vue List Of Posts</h2>
+    <h2 class="is-size-4">Vue List Of Posts</h2>
 
    
     <div class="navbar-end">

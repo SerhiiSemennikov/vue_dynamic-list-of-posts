@@ -9,6 +9,8 @@ export default {
   data() {
     return {
       email: "",
+      username: '',
+      phone: '',
       // name: "",
       isNeedToRegister: false,
     };
@@ -52,7 +54,7 @@ export default {
       </h1>
 
       <div class="field">
-        <label class="label" htmlFor="user-email"> Email </label>
+        <label class="label" for="user-email"> Email </label>
 
         <div class="control has-icons-left">
           <input

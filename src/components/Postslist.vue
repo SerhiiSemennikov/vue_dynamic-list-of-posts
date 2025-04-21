@@ -38,7 +38,7 @@ export default {
   methods: {
     handleCloseSidebar() {
       this.isActiveSidebar = false;
-      this.loader;
+      
     },
     handleOpenSidebar() {
       this.isActiveSidebar = true;
