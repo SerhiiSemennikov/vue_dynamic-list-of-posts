@@ -8,6 +8,6 @@ export const addComment = (data) => {
   return client.post("/comments", data);
 };
 
-export const deleteComment = (commentId) => {
+export const removeComment = (commentId) => {
   return client.delete(`/comments/${commentId}`);
 };

@@ -1,5 +1,5 @@
 <script>
-import { deletePost, getPosts, updatePost } from "../api/posts";
+import { removePost, getPosts, updatePost } from "../api/posts";
 import Loader from "./Loader.vue";
 import PostItem from "./PostItem.vue";
 import Sidebar from "./Sidebar.vue";
@@ -54,7 +54,7 @@ export default {
       this.isActiveSidebar = false;
     },
     deletePost(postId) {
-      deletePost(postId).then(() => {
+      removePost(postId).then(() => {
         this.posts = this.posts.filter((post) => post.id !== postId);
       });
       this.selectedPost = {};

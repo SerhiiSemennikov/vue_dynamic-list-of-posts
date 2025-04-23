@@ -9,7 +9,7 @@ export const addPost = (data) => {
   return client.post("/posts", data);
 };
 
-export const deletePost = (postId) => {
+export const removePost = (postId) => {
   return client.delete(`/posts/${postId}`);
 };
 

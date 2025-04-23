@@ -1,5 +1,5 @@
 <script>
-import { deleteComment, getComments } from "../api/comments";
+import { removeComment, getComments } from "../api/comments";
 import AddCommentForm from "./AddCommentForm.vue";
 import Loader from "./Loader.vue";
 export default {
@@ -53,7 +53,7 @@ export default {
   methods: {
     deleteComment(commentId) {
       // this.comments = this.comments.filter((com) => com.id !== commentId);
-      deleteComment(commentId).then(() => {
+      removeComment(commentId).then(() => {
         this.comments = this.comments.filter((com) => com.id !== commentId);
       });
     },
