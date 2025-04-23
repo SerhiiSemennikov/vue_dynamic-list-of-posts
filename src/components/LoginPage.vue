@@ -1,22 +1,31 @@
 <script>
 import { addUser, getUserByEmail } from "../api/users.js";
-import NeedToRegister from "./needToRegister.vue";
+// import NeedToRegister from "./needToRegister.vue";
+// import ChildComponent from './ChildComponent.vue';
+// import { ref } from "vue";
+import InputField from "./InputField.vue";
 export default {
   name: "LoginPage",
   components: {
-    NeedToRegister,
+    // NeedToRegister,
+    // ChildComponent,
+    InputField,
   },
   data() {
     return {
       email: "",
       username: '',
       phone: '',
-      // name: "",
+      name: "",
+      inputError: "",
       isNeedToRegister: false,
     };
   },
   emits: ["addUser", "name"],
   methods: {
+     handleData(data) {
+      this.receivedData = data;
+    },
     handleLogin(email) {
       getUserByEmail(email).then(({ data }) => {
         if (!data.length) {
@@ -43,6 +52,7 @@ export default {
 
 <template>
   <section class="container is-flex is-justify-content-center">
+  
     <form
       @submit.prevent="
         isNeedToRegister ? handleRegister() : handleLogin(email)
@@ -76,11 +86,13 @@ export default {
 
       <div v-if="isNeedToRegister" class="field">
 
-     <NeedToRegister #default="{ x }" >
-          {{ (name = x) }}
-        </NeedToRegister>
-     
-
+     <!--<NeedToRegister #default="{ x }" >
+        {{ name = x }} 
+         </NeedToRegister>
+        -->
+        <InputField v-model="name" :inputName="'registerName'"  :inputError="inputError"/>
+        <p>my name is: {{ name }}</p>
+        
   
       </div>
 
@@ -91,6 +103,9 @@ export default {
       </div>
     </form>
   </section>
+    <div>
+   
+  </div>
 </template>
 
 <script></script>

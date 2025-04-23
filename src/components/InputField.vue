@@ -5,7 +5,7 @@ export default {
     inputError: String,
     inputName: String,
     modelValue: String,
-    userName: String,
+    userName: String || null,
   },
   data() {
     return {
@@ -31,6 +31,12 @@ export default {
         this.inputLabel = "Title";
         this.inputType = "text";
         this.inputPlaceholder = "Post Title";
+        this.inputIcon = "fa-user";
+        break;
+          case "registerName":
+        this.inputLabel = "Name";
+        this.inputType = "text";
+        this.inputPlaceholder = "Enter Your Name";
         this.inputIcon = "fa-user";
         break;
       case "commentAuthor":

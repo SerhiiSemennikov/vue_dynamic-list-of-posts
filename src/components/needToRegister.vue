@@ -24,9 +24,9 @@ export default {
         required
         minlength="4"
       />
-      <div class="body">
+      <!--<div class="body">
         <slot :x="name">{{ name }}</slot>
-      </div>
+      </div>-->
       <span class="icon is-small is-left">
         <i class="fas fa-user" />
       </span>
@@ -37,3 +37,45 @@ export default {
 </template>
 
 <style></style>
+<!-- ParentComponent.vue 
+<template>
+  <div>
+    <ChildComponent @data-sent="handleData" />
+    <p>{{ receivedData.message }}</p>
+  </div>
+</template>
+
+<script>
+import ChildComponent from './ChildComponent.vue';
+
+export default {
+  components: {
+    ChildComponent
+  },
+  data() {
+    return {
+      receivedData: {}
+    };
+  },
+  methods: {
+    handleData(data) {
+      this.receivedData = data;
+    }
+  }
+}
+</script>
+ ChildComponent.vue 
+<template>
+  <button @click="sendData">Send Data</button>
+</template>
+
+<script>
+export default {
+  methods: {
+    sendData() {
+      const data = { message: 'Hello from Child' };
+      this.$emit('data-sent', data);
+    }
+  }
+}
+</script> -->
